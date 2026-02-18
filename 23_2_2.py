@@ -8,16 +8,16 @@ C. Умножить на 2.
 """
 
 
-def f(start, end, command):
+def f(start, end, ok):
     if start == end:
         return True
     if start > end + 1:
         return False
 
-    if command == 1:
-        return f(start + 3, end, command - 1) + f(start * 2, end, command - 1)
+    if ok:
+        return f(start + 3, end, False) + f(start * 2, end, False)
     else:
-        return f(start -1 , end, command + 1) + f(start + 3, end, command) + f(start * 2, end, command)
+        return f(start -1 , end, True) + f(start + 3, end, ok) + f(start * 2, end, ok)
 
 
-print(f(3, 12,0))
+print(f(3, 12,False))

@@ -7,16 +7,16 @@ C.Умножить на 2.
 содержат двух команд A подряд?
 """
 
-def f(start,end, x):
+def f(start,end, ok):
     if start > end + 1:
         return False
     if start == end:
         return True
     else:
-        if x == 1:
-            return f(start * 2, end, x-1) + f(start * 3, end, x-1)
+        if ok:
+            return f(start * 2, end, False) + f(start * 3, end, False)
         else:
-            return f(start -1, end, x+1) + f(start * 2, end, x) + f(start * 3, end, x)
+            return f(start -1, end, True) + f(start * 2, end, ok) + f(start * 3, end, ok)
 
 
 print(f(3,20, 0))
