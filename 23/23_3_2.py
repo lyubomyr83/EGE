@@ -19,4 +19,4 @@ def f(start,end, ok):
             return f(start -1, end, True) + f(start * 2, end, ok) + f(start * 3, end, ok)
 
 
-print(f(3,20, 0))
+print(f(3,20, False))
