@@ -15,9 +15,9 @@ def f(start, end, ok):
         return False
 
     if ok:
-        return f(start + 3, end, False) + f(start * 2, end, False)
+        return f(start - 1, end, False) + f(start + 3, end, True) + f(start * 2, end, True)
     else:
-        return f(start -1 , end, True) + f(start + 3, end, ok) + f(start * 2, end, ok)
+        return f(start + 3, end, True) + f(start * 2, end, True)
 
 
-print(f(3, 12,False))
+print(f(3, 12, True))
