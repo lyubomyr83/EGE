@@ -10,11 +10,11 @@
 
 # Петя Ваня
 
-def f(s, p, m):
+def f(s, m):
     if s >= 92: return m % 2 == 0
     if m == 0: return 0
-    moves = [f(s + k , p+1, m - 1) for k in range(1, s + 1) if s % k == 0]
+    moves = [f(s + k , m - 1) for k in range(1, s + 1) if s % k == 0]
 
     return any(moves) if m % 2 != 0 else all(moves)
 
-print(min([s for s in range(1, 93) if f(s, 0, 2) ]))
+print(min([s for s in range(1, 93) if f(s, 2) ]))
