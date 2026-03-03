@@ -15,6 +15,6 @@ def f(s, m):
     if m == 0: return 0
     moves = [f(s + k , m - 1) for k in range(1, s + 1) if s % k == 0]
 
-    return any(moves) if m % 2 != 0 else all(moves)
+    return any(moves) if m % 2 != 0 else all(moves) # когда Петя не может выиграть первым ходом
 
 print(min([s for s in range(1, 93) if f(s, 2) ]))
