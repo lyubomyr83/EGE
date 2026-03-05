@@ -16,6 +16,6 @@ def f(s, m):
     if m == 0: return 0  # так как ходы уменьшаем, то минимальный ход 0
     moves = [f(s + 1, m - 1), f(s + 4, m - 1), f(s * 5, m - 1)]  # все возможные ходы
 
-    return any(moves) if m % 2 != 0 else any(moves)
+    return any(moves) if m % 2 != 0 else any(moves) # после неудачного первого хода Пети
 
 print(min([s for s in range(1, 68) if f(s, 2)])) # начинаем с максимально возможного хода
