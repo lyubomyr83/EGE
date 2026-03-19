@@ -2,7 +2,7 @@ from itertools import *
 
 
 def f1(x, y, z, w):
-    return ((x <= y) == (w or (not (z))))
+    return ((x <= y) == (w or (not(z))))
 
 
 def f2(x, y, z, w):
