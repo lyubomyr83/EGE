@@ -1,7 +1,3 @@
-"""
-
-"""
-
 P = list(range(15, 41))
 Q = list(range(21, 64))
 A = list(range(1, 1000))
