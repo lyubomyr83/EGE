@@ -14,7 +14,7 @@
 
 from itertools import product
 
-for i, word in enumerate(product('АКРУ', repeat=5), start=1):
+for i, word in enumerate(product(''.join(sorted('АКРУ')), repeat=5), start=1):
     if i == 150:
         print(''.join(word))
         break
