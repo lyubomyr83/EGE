@@ -8,13 +8,15 @@
 ?
 """
 
-for A in range(1000):
-    for x in range(1000):
-        for y in range(1000):
-            if not(((x * y) > A) or (x>y) or (11 > x)):
+for A in range(1000, 0, -1):
+    ok = True
+    for x in range(100):
+        for y in range(100):
+            if not((x * y > A) or (x > y) or (11 > x)):
+                ok = False
                 break
-        else:
-            print(A)
+        if not ok:
             break
-
-# Ответ 120
+    if ok:
+        print(A)
+        break
