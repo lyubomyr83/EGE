@@ -24,14 +24,13 @@ def f(s, m):
     moves = []
 
     if (s + 1) % 3:
-        moves.append(f(s + 1, m -1))
+        moves.append(f(s + 1, m - 1))
     if (s + 2) % 3:
         moves.append(f(s + 2, m - 1))
     if (s * 2) % 3:
         moves.append(f(s * 2, m - 1))
 
-    return any(moves) if m % 2 != 0 else all(moves)
+    return any(moves) if m % 2 else all(moves)
 
-for s in range(1, 150):
-    if s % 3 and f(s, 2):
-            print(s)
+
+print([s for s in range(1, 150) if f(s, 2) and s % 3])
