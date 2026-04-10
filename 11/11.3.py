@@ -14,6 +14,6 @@
 from math import *
 
 i = 4
-password = ceil(15 * i /8)
+password = ceil(15 * i / 8)
 one_user_password = password + 12
 print(one_user_password * 50)
