@@ -10,7 +10,7 @@ n = []
 
 for i in range(84052, 84130 + 1):
     numbers=[]
-    for j in range(2,i):
+    for j in range(1, i+1):
         if i%j==0:
             numbers.append(j)
 

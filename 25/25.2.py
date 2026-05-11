@@ -14,3 +14,4 @@ for i in range(174457, 174505 + 1):
             break
     if len(numbers) == 2:
         print(*numbers)
+
