@@ -97,3 +97,4 @@ px = (sum([x for x, y in centroids]) / col) * 10000
 py = (sum([y for x, y in centroids]) / col) * 10000
 
 print(int(px), int(py))
+
