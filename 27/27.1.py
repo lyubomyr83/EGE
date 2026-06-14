@@ -44,7 +44,7 @@ for x, y in points: # переберём все x, y
 
 centroids = [[] for _ in range(col)]
 
-for i in range(2):
+for i in range(col):
     min_sum_dist = 10 ** 8  # если сумма Эвклидовых расстояний будет меньше этого числа, то мы его заменим
 
     # посчитаем сумму
