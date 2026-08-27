@@ -3,8 +3,10 @@
 в записи которых ровно две цифры 3, и при этом никакая нечётная цифра не стоит рядом с
 цифрой 2.
 
+Ответ:3352
+
+Внимательно читать условие!!! Число сначала переводится в девятиричную СС а потом считается его длина
 """
-from operator import index
 
 
 def convert(n):
@@ -16,9 +18,35 @@ def convert(n):
 
 col = 0
 
-for i in range(10000, 100000):
+for i in range(100000):
     i_ = convert(i)
-    if i_.count('3') == 2:
-        for j in i_:
-            if j == '2':
-                if
+    if len(i_) == 5:
+        if i_.count('3') == 2:
+
+            ok = True
+
+            for j in range(len(i_)):
+                if i_[j] == '2':
+                    if 0 < j < len(i_) - 1:
+                        if i_[j-1] not in ['1', '3', '5', '7'] and i_[j+1] not in ['1', '3', '5', '7']:
+                            pass
+                        else:
+                            ok = False
+                            break
+                    elif j == 0:
+                        if i_[j + 1] not in ['1', '3', '5', '7']:
+                            pass
+                        else:
+                            ok = False
+                            break
+                    elif j == len(i_) - 1:
+                        if i_[j-1] not in ['1', '3', '5', '7']:
+                            pass
+                        else:
+                            ok = False
+                            break
+
+            if ok:
+                col += 1
+
+print(col)
