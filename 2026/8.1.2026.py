@@ -25,9 +25,9 @@ for i in range(100000):
 
             ok = True
 
-            for j in range(len(i_)):
+            for j in range(5):
                 if i_[j] == '2':
-                    if 0 < j < len(i_) - 1:
+                    if 0 < j < 4:
                         if i_[j-1] not in ['1', '3', '5', '7'] and i_[j+1] not in ['1', '3', '5', '7']:
                             pass
                         else:
@@ -39,7 +39,7 @@ for i in range(100000):
                         else:
                             ok = False
                             break
-                    elif j == len(i_) - 1:
+                    elif j == 4:
                         if i_[j-1] not in ['1', '3', '5', '7']:
                             pass
                         else:
