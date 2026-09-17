@@ -1,7 +1,5 @@
 from itertools import permutations
 
-from jinja2.nodes import Break
-
 table = '56 4568 78 2578 1246 125 348 2347'.split() #
 graph = 'АБ АГ АЕ БГ БЖ БД ГЕ ГЖ ЖД ЖИ ИД ИВ ВД'.split()
 
