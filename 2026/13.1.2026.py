@@ -11,6 +11,6 @@ from ipaddress import ip_network
 # 102.162.200.0 адрес сети
 # 102.162.200.255 широковежательный адрес в сети
 
-ip = ip_network('102.162.200.51/255.255.255.0', strict=0)[-2]
-
-print(sum(map(int, str(ip).split('.'))))
+ip = ip_network('102.162.200.51/255.255.255.0', strict=0)
+print(ip[-1]) # 102.162.200.255 нам не подходит так как он широковещательный
+print(sum(map(int, str(ip[-2]).split('.'))))
