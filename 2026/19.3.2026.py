@@ -26,4 +26,4 @@ def f(s1, s2, m):
     return any(moves) if m % 2 != 0 else any(moves)
 
 
-print(min([s for s in range(14, 162) if f(14, s, 2)]))
+print(min([s for s in range(1, 162) if f(14, s, 2)]))
